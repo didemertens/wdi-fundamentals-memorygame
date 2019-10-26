@@ -41,6 +41,13 @@ function flipCard() {
   }
 }
 
+function hideCards() {
+  for (let i = 0; i < cards.length; i++) {
+    document.getElementsByTagName('img')[i].setAttribute('src', 'images/back.png');
+  }
+  cardsInPlay.length = 0;
+}
+
 function createBoard() {
   for (let i = 0; i < cards.length; i++) {
     const cardElement = document.createElement('img');
@@ -50,5 +57,9 @@ function createBoard() {
     document.getElementById('game-board').appendChild(cardElement);
   }
 }
+
+// listen for reset button
+const resetBtn = document.getElementById('resetBtn');
+resetBtn.addEventListener('click', hideCards);
 
 createBoard();
