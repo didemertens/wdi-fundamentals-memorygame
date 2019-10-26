@@ -68,6 +68,19 @@ a:hover {
 	border-bottom: 2px solid white;
 }
 
+#resetBtn {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  color: #F15B31;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#resetBtn:hover {
+  background-color: #F15B31;
+  color: #FFFFFF;
+}
+
 footer {
 	text-transform: uppercase;
 	padding: 0 20px;
