@@ -31,16 +31,24 @@ function checkForMatch() {
   }
 }
 
-function flipCard(cardID) {
-  console.log("User flipped " + cards[cardID].rank);
-  cardsInPlay.push(cards[cardID].rank);
-  console.log(cards[cardID].cardImage);
-  console.log(cards[cardID].suit);
+function flipCard() {
+  const cardId = this.getAttribute('data-id');
+  cardsInPlay.push(cards[cardId].rank);
+  this.setAttribute('src', cards[cardId].cardImage);
 
   if (cardsInPlay.length === 2) {
     checkForMatch();
   }
 }
 
-flipCard(0);
-flipCard(2);
+function createBoard() {
+  for (let i = 0; i < cards.length; i++) {
+    const cardElement = document.createElement('img');
+    cardElement.setAttribute('src', 'images/back.png');
+    cardElement.setAttribute('data-id', i);
+    cardElement.addEventListener('click', flipCard);
+    document.getElementById('game-board').appendChild(cardElement);
+  }
+}
+
+createBoard();
