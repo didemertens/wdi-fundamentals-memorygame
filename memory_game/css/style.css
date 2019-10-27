@@ -38,9 +38,11 @@ h2 {
 	letter-spacing: 1px;
 }
 
-h4 {
+h3 {
 	text-transform: uppercase;
-	font-family: "Raleway", sans-serif;
+	font-family: "Droid Serif", serif;
+  color: #F15B31;
+  padding: 10px;
 }
 
 p {
@@ -48,6 +50,12 @@ p {
 	color: #1b2036;
 	letter-spacing: 1px;
 	font-weight: 600;
+}
+
+#gameScore {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 img {
@@ -69,14 +77,24 @@ a:hover {
 }
 
 #resetBtn {
+  color: #F15B31;
+  font-size: 17px;
+}
+
+#resetBtn:hover {
+  color: #00A6B3;
+}
+
+#nextBtn {
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
   color: #F15B31;
   padding: 10px;
   border-radius: 10px;
+  font-size: 16px;
 }
 
-#resetBtn:hover {
+#nextBtn:hover {
   background-color: #F15B31;
   color: #FFFFFF;
 }
